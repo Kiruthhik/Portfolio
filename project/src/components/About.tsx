@@ -3,10 +3,10 @@ import { MapPin, Calendar, Award, Heart } from 'lucide-react';
 
 const About: React.FC = () => {
   const stats = [
-    { icon: Calendar, label: 'Years Experience', value: '3+' },
-    { icon: Award, label: 'Projects Completed', value: '50+' },
-    { icon: Heart, label: 'Happy Clients', value: '30+' },
-    { icon: MapPin, label: 'Countries Served', value: '10+' },
+    { icon: Calendar, label: 'Years Experience', value: '2+' },
+    { icon: Award, label: 'Awards Won', value: '5+' },
+    //{ icon: Heart, label: 'Hackathon won', value: '3+' },
+    { icon: MapPin, label: 'Projects Completed', value: '10+' },
   ];
 
   return (
@@ -28,14 +28,14 @@ const About: React.FC = () => {
           <div className="space-y-6">
             <div className="prose prose-lg max-w-none">
               <p className="text-gray-700 leading-relaxed mb-6">
-                I'm a passionate Full Stack Developer with over 3 years of experience in creating
-                digital solutions that make a difference. My journey started with curiosity about
-                how websites work, and it has evolved into a deep passion for crafting exceptional
-                user experiences.
+                A software enthusiast who is eager to learn and explore new
+ domains. To grow and develop my skills in a collaborative
+ environment. To learn the growing trends and technologies and to
+ contribute for the development of an organization.
               </p>
               
               <p className="text-gray-700 leading-relaxed mb-6">
-                I specialize in modern web technologies including React, Node.js, and cloud
+                I specialize in modern web technologies including React, Django, and cloud
                 platforms. I believe in writing clean, maintainable code and creating intuitive
                 interfaces that users love to interact with.
               </p>
