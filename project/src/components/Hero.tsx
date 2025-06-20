@@ -1,5 +1,6 @@
 import React from 'react';
 import { ChevronDown, Download, MessageCircle } from 'lucide-react';
+import heroBg from '../../assets/hero-bg.jpg';
 
 const Hero: React.FC = () => {
   const scrollToSection = (href: string) => {
@@ -14,22 +15,32 @@ const Hero: React.FC = () => {
       id="home"
       className="min-h-screen flex items-center justify-center relative overflow-hidden"
     >
-      {/* Animated Background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-blue-50 via-white to-purple-50">
+      {/* Background Image Layer */}
+      <div
+        className="absolute inset-0 z-0 bg-cover bg-center opacity-60"
+        style={{ backgroundImage: `url(${heroBg})` }}
+        aria-hidden="true"
+      />
+
+      {/* Animated Gradient Overlay */}
+      <div className="absolute inset-0 bg-gradient-to-br from-blue-50 via-white to-purple-50 z-0">
         <div className="absolute inset-0 bg-gradient-to-r from-blue-600/10 via-purple-600/10 to-pink-600/10 animate-gradient bg-[length:400%_400%]"></div>
       </div>
 
       {/* Floating Elements */}
-      <div className="absolute top-20 left-20 w-72 h-72 bg-blue-500/10 rounded-full blur-3xl animate-float"></div>
-      <div className="absolute bottom-20 right-20 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl animate-float" style={{ animationDelay: '1s' }}></div>
+      <div className="absolute top-20 left-20 w-72 h-72 bg-blue-500/10 rounded-full blur-3xl animate-float z-10"></div>
+      <div
+        className="absolute bottom-20 right-20 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl animate-float z-10"
+        style={{ animationDelay: '1s' }}
+      ></div>
 
-      <div className="container mx-auto px-6 relative z-10">
+      <div className="container mx-auto px-6 relative z-20">
         <div className="text-center max-w-4xl mx-auto">
           {/* Profile Image */}
           <div className="mb-8 relative inline-block">
             <div className="w-32 h-32 mx-auto rounded-full bg-gradient-to-r from-blue-500 to-purple-600 p-1 animate-glow">
               <img
-                src="C:\Users\HP\Documents\Portfolio\project\assets\kiruthhik.JPG"
+                src="/assets/kiruthhik.JPG"
                 alt="Kiruthhik"
                 className="w-full h-full rounded-full object-cover"
               />
@@ -92,7 +103,7 @@ const Hero: React.FC = () => {
       {/* Scroll Indicator */}
       <button
         onClick={() => scrollToSection('#about')}
-        className="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-gray-400 hover:text-gray-600 transition-colors duration-200 animate-bounce"
+        className="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-gray-400 hover:text-gray-600 transition-colors duration-200 animate-bounce z-30"
       >
         <ChevronDown size={32} />
       </button>
