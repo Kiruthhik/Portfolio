@@ -29,14 +29,14 @@ const Contact: React.FC = () => {
     {
       icon: Mail,
       label: 'Email',
-      value: 'kiruthhik@example.com',
-      href: 'mailto:kiruthhik@example.com',
+      value: 'kiruthhik@gmail.com',
+      href: 'mailto:kiruthhik@gmail.com',
     },
     {
       icon: Phone,
       label: 'Phone',
-      value: '+91 9876543210',
-      href: 'tel:+919876543210',
+      value: '+91 9342929505',
+      href: 'tel:+919342929505',
     },
     {
       icon: MapPin,
@@ -50,21 +50,16 @@ const Contact: React.FC = () => {
     {
       icon: Github,
       label: 'GitHub',
-      href: 'https://github.com',
+      href: 'https://github.com/kiruthhik',
       color: 'hover:text-gray-900',
     },
     {
       icon: Linkedin,
       label: 'LinkedIn',
-      href: 'https://linkedin.com',
+      href: 'www.linkedin.com/in/kiruthhik-a-s-676a02257',
       color: 'hover:text-blue-600',
     },
-    {
-      icon: Twitter,
-      label: 'Twitter',
-      href: 'https://twitter.com',
-      color: 'hover:text-blue-400',
-    },
+    
   ];
 
   return (

@@ -1,40 +1,47 @@
 import React from 'react';
-import { Code, Palette, Database, Cloud, Smartphone, Globe } from 'lucide-react';
+import {
+  Code,
+  Database,
+  TerminalSquare,
+  Layers,
+  GitBranch,
+  Server,
+  Globe,
+  Shield,
+} from 'lucide-react';
 
 const Skills: React.FC = () => {
   const skillCategories = [
     {
-      icon: Code,
-      title: 'Frontend Development',
-      skills: [
-        { name: 'React', level: 50 },
-        { name: 'JavaScript', level: 60 },
-        { name: 'HTML', level: 95 },
-        { name: 'Bootstrap', level: 90 },
-      ],
-    },
-    {
-      icon: Database,
-      title: 'Backend Development',
-      skills: [
-        { name: 'Django', level: 85 },
-        { name: 'Python', level: 80 },
-        { name: 'Flask', level: 85 },
-        //{ name: 'PostgreSQL', level: 75 },
-      ],
-    },
-    {
-      icon: Palette,
+      icon: TerminalSquare,
       title: 'Programming Languages',
       skills: [
         { name: 'Java', level: 90 },
         { name: 'Python', level: 80 },
         { name: 'C', level: 85 },
-        //{ name: 'User Research', level: 75 },
       ],
     },
     {
-      icon: Cloud,
+      icon: Code,
+      title: 'Frontend',
+      skills: [
+        { name: 'HTML', level: 95 },
+        { name: 'CSS', level: 90 },
+        { name: 'JavaScript', level: 60 },
+        { name: 'Bootstrap', level: 90 },
+      ],
+    },
+    {
+      icon: Server,
+      title: 'Backend',
+      skills: [
+        { name: 'Django', level: 85 },
+        { name: 'Flask', level: 85 },
+        { name: 'Django Rest', level: 80 },
+      ],
+    },
+    {
+      icon: Database,
       title: 'Database',
       skills: [
         { name: 'MySQL', level: 80 },
@@ -43,15 +50,31 @@ const Skills: React.FC = () => {
         { name: 'PostGIS', level: 70 },
       ],
     },
+    {
+      icon: GitBranch,
+      title: 'Version Control',
+      skills: [
+        { name: 'Git', level: 90 },
+        { name: 'GitHub', level: 90 },
+      ],
+    },
+    {
+      icon: Shield,
+      title: 'Certifications',
+      skills: [
+        { name: 'CS50x', level: 100 },
+        { name: 'CS50 Web Programming', level: 100 },
+      ],
+    },
   ];
 
   const tools = [
     { name: 'VS Code', icon: '💻' },
     { name: 'Git', icon: '🔧' },
-    { name: 'Figma', icon: '🎨' },
     { name: 'Postman', icon: '📡' },
-    { name: 'Slack', icon: '💬' },
-    { name: 'Notion', icon: '📝' },
+    //{ name: 'Notion', icon: '📝' },
+    //{ name: 'Figma', icon: '🎨' },
+    //{ name: 'Slack', icon: '💬' },
   ];
 
   return (
@@ -69,7 +92,7 @@ const Skills: React.FC = () => {
         </div>
 
         {/* Skills Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8 mb-16">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           {skillCategories.map((category, index) => (
             <div
               key={index}

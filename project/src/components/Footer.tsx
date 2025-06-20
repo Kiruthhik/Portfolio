@@ -45,8 +45,9 @@ const Footer: React.FC = () => {
             <h3 className="text-lg font-semibold mb-4">Services</h3>
             <div className="space-y-2 text-gray-400">
               <div>Web Development</div>
-              <div>UI/UX Design</div>
-              <div>Mobile Development</div>
+              <div>Backend Development</div>
+              <div>API Development</div>
+              <div>Database Management</div>
               <div>Consulting</div>
               <div>Technical Writing</div>
             </div>

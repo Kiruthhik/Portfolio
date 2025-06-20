@@ -9,6 +9,16 @@ const Hero: React.FC = () => {
     }
   };
 
+  // Function to handle download (for advanced cases, but anchor with download is better for static assets)
+  const handleDownload = () => {
+    const link = document.createElement('a');
+    link.href = '/assets/kiruthhik_resume.pdf'; // Make sure this path matches your public/assets location
+    link.download = 'Kiruthhik_Resume.pdf';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
   return (
     <section
       id="home"
@@ -64,17 +74,32 @@ const Hero: React.FC = () => {
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-            <button
+            {/* Example for View My Work button */}
+            {/* <button
               onClick={() => scrollToSection('#projects')}
               className="px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-full hover:from-blue-700 hover:to-purple-700 transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl"
             >
               <MessageCircle className="inline-block w-5 h-5 mr-2" />
               View My Work
-            </button>
-            <button className="px-8 py-4 border-2 border-gray-300 text-white font-semibold rounded-full hover:bg-gray-50/10 hover:border-gray-400 transform hover:scale-105 transition-all duration-200">
+            </button> */}
+            <a
+              href="/assets/kiruthhik_resume.pdf"
+              download="Kiruthhik_Resume.pdf"
+              className="px-8 py-4 border-2 border-gray-300 text-white font-semibold rounded-full hover:bg-gray-50/10 hover:border-gray-400 transform hover:scale-105 transition-all duration-200 inline-flex items-center justify-center"
+            >
+              <Download className="inline-block w-5 h-5 mr-2" />
+              Download CV
+            </a>
+            {/* 
+            // Or, if you want to use a button with JS handler:
+            <button
+              onClick={handleDownload}
+              className="px-8 py-4 border-2 border-gray-300 text-white font-semibold rounded-full hover:bg-gray-50/10 hover:border-gray-400 transform hover:scale-105 transition-all duration-200 inline-flex items-center justify-center"
+            >
               <Download className="inline-block w-5 h-5 mr-2" />
               Download CV
             </button>
+            */}
           </div>
 
           {/* Tech Stack */}

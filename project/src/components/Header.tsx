@@ -39,7 +39,7 @@ const Header: React.FC = () => {
     >
       <nav className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
-          <div className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+          <div className="text-2xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
             Kiruthhik
           </div>
 
@@ -63,7 +63,7 @@ const Header: React.FC = () => {
           {/* Social Links */}
           <div className="hidden md:flex items-center space-x-4">
             <a
-              href="https://github.com"
+              href="https://github.com/kiruthhik"
               target="_blank"
               rel="noopener noreferrer"
               className={`transition-colors duration-200 ${
@@ -75,7 +75,7 @@ const Header: React.FC = () => {
               <Github size={20} />
             </a>
             <a
-              href="https://linkedin.com"
+              href="https://www.linkedin.com/in/kiruthhik-a-s-676a02257"
               target="_blank"
               rel="noopener noreferrer"
               className={`transition-colors duration-200 ${
@@ -87,7 +87,7 @@ const Header: React.FC = () => {
               <Linkedin size={20} />
             </a>
             <a
-              href="mailto:contact@example.com"
+              href="mailto:kiruthhik@gmail.com"
               className={`transition-colors duration-200 ${
                 isScrolled
                   ? 'text-gray-700 hover:text-blue-600'
