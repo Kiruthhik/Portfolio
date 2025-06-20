@@ -42,7 +42,7 @@ const Hero: React.FC = () => {
 
       <div className="container mx-auto px-6 relative z-30">
         <div className="text-center max-w-4xl mx-auto">
-          {/* Profile Image */}
+          {/* Profile Image
           <div className="mb-8 relative inline-block">
             <div className="w-32 h-32 mx-auto rounded-full bg-gradient-to-r from-blue-500 to-purple-600 p-1 animate-glow">
               <img
@@ -51,7 +51,7 @@ const Hero: React.FC = () => {
                 className="w-full h-full rounded-full object-cover"
               />
             </div>
-          </div>
+          </div> */}
 
           {/* Main Content */}
           <div className="mb-8">
