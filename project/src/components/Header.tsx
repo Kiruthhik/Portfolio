@@ -49,7 +49,11 @@ const Header: React.FC = () => {
               <button
                 key={item.name}
                 onClick={() => scrollToSection(item.href)}
-                className="text-gray-700 hover:text-blue-600 transition-colors duration-200 font-medium"
+                className={`transition-colors duration-200 font-medium ${
+                  isScrolled
+                    ? 'text-gray-900 hover:text-blue-600'
+                    : 'text-white hover:text-blue-300'
+                }`}
               >
                 {item.name}
               </button>
@@ -62,7 +66,11 @@ const Header: React.FC = () => {
               href="https://github.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-gray-600 hover:text-blue-600 transition-colors duration-200"
+              className={`transition-colors duration-200 ${
+                isScrolled
+                  ? 'text-gray-700 hover:text-blue-600'
+                  : 'text-gray-200 hover:text-blue-300'
+              }`}
             >
               <Github size={20} />
             </a>
@@ -70,13 +78,21 @@ const Header: React.FC = () => {
               href="https://linkedin.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-gray-600 hover:text-blue-600 transition-colors duration-200"
+              className={`transition-colors duration-200 ${
+                isScrolled
+                  ? 'text-gray-700 hover:text-blue-600'
+                  : 'text-gray-200 hover:text-blue-300'
+              }`}
             >
               <Linkedin size={20} />
             </a>
             <a
               href="mailto:contact@example.com"
-              className="text-gray-600 hover:text-blue-600 transition-colors duration-200"
+              className={`transition-colors duration-200 ${
+                isScrolled
+                  ? 'text-gray-700 hover:text-blue-600'
+                  : 'text-gray-200 hover:text-blue-300'
+              }`}
             >
               <Mail size={20} />
             </a>
@@ -85,7 +101,9 @@ const Header: React.FC = () => {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="md:hidden text-gray-700 hover:text-blue-600 transition-colors duration-200"
+            className={`md:hidden transition-colors duration-200 ${
+              isScrolled ? 'text-gray-900 hover:text-blue-600' : 'text-white hover:text-blue-300'
+            }`}
           >
             {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
@@ -108,7 +126,7 @@ const Header: React.FC = () => {
                 href="https://github.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-gray-600 hover:text-blue-600 transition-colors duration-200"
+                className="text-gray-700 hover:text-blue-600 transition-colors duration-200"
               >
                 <Github size={20} />
               </a>
@@ -116,13 +134,13 @@ const Header: React.FC = () => {
                 href="https://linkedin.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-gray-600 hover:text-blue-600 transition-colors duration-200"
+                className="text-gray-700 hover:text-blue-600 transition-colors duration-200"
               >
                 <Linkedin size={20} />
               </a>
               <a
                 href="mailto:contact@example.com"
-                className="text-gray-600 hover:text-blue-600 transition-colors duration-200"
+                className="text-gray-700 hover:text-blue-600 transition-colors duration-200"
               >
                 <Mail size={20} />
               </a>
